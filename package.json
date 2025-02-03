@@ -31,9 +31,7 @@
 		"node": ">=18"
 	},
 	"scripts": {
-    "prepare": "node npm-scripts.mjs prepare",
-    "postinstall": "node npm-scripts.mjs postinstall",
-    "prepublishOnly": "npm run prepare",
+    "postinstall": "node npm-scripts.mjs postinstall && node npm-scripts.mjs prepare",
 		"typescript:build": "node npm-scripts.mjs typescript:build",
 		"typescript:watch": "node npm-scripts.mjs typescript:watch",
 		"lint": "npm run lint:node && npm run lint:python",
